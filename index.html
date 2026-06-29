@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HERO -->
+  <!-- HERO SECTION -->
   <section class="hero">
+    <img src="me.jpg" alt="My Photo" class="profile-pic">
+
     <h1>Hi, I'm Your Name</h1>
     <p>Web Developer | BIM Student</p>
+
     <a href="#contact" class="btn">Hire Me</a>
   </section>
 
@@ -19,7 +22,7 @@
   <section class="section">
     <h2>About Me</h2>
     <p>
-      I am a BIM student interested in web development. I enjoy building simple web applications and learning new technologies.
+      I am a BIM student passionate about web development. I enjoy building simple and clean web applications and improving my programming skills.
     </p>
   </section>
 
@@ -27,9 +30,9 @@
   <section class="section">
     <h2>Projects</h2>
     <ul>
-      <li>Movie App (Web Project)</li>
-      <li>Job Portal System (Web Project)</li>
-      <li>Weather App (API Project)</li>
+      <li>Movie App (Web Application)</li>
+      <li>Job Portal System</li>
+      <li>Weather App (API Integration)</li>
     </ul>
   </section>
 
@@ -39,12 +42,19 @@
     <p>HTML, CSS, Basic JavaScript</p>
   </section>
 
-  <!-- CONTACT -->
-  <section class="section" id="contact">
-    <h2>Contact</h2>
-    <p>Email: yourmail@gmail.com</p>
-    <p>LinkedIn: your profile link</p>
-    <p>GitHub: your GitHub link</p>
+  <!-- CONTACT FORM -->
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="tel" placeholder="Phone Number">
+      <input type="text" placeholder="Subject">
+      <textarea placeholder="Your Message" rows="5"></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
 </body>
