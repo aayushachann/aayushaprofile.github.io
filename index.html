@@ -8,11 +8,11 @@
 </head>
 <body>
 
-  <!-- HERO SECTION -->
+  <!-- HERO -->
   <section class="hero">
-    <img src="me.jpeg" alt="My Photo" class="profile-pic">
+    <img src="me.jpg" class="profile-pic" alt="My Photo">
 
-    <h1>Hi, I'm Aayusha Khadka</h1>
+    <h1>Hi, I'm Your Name</h1>
     <p>Web Developer | BIM Student</p>
 
     <a href="#contact" class="btn">Hire Me</a>
@@ -22,7 +22,7 @@
   <section class="section">
     <h2>About Me</h2>
     <p>
-      I am a BIM student . I enjoy building simple and clean web applications and improving my programming skills.
+      I am a BIM student interested in web development and building simple projects.
     </p>
   </section>
 
@@ -30,32 +30,56 @@
   <section class="section">
     <h2>Projects</h2>
     <ul>
-      <li>Movie App (Web Application)</li>
-      <li>Job Portal System</li>
-      <li>Weather App (API Integration)</li>
+      <li>Movie App</li>
+      <li>Job Portal</li>
+      <li>Weather App</li>
     </ul>
   </section>
 
-  <!-- SKILLS -->
-  <section class="section">
-    <h2>Skills</h2>
-    <p>HTML, CSS, Basic JavaScript</p>
-  </section>
-
-  <!-- CONTACT FORM -->
-  <section id="contact" class="section">
+  <!-- CONTACT -->
+  <section class="section" id="contact">
     <h2>Contact Me</h2>
 
-    <form>
-      <input type="text" placeholder="Full Name" required>
-      <input type="email" placeholder="Email" required>
-      <input type="tel" placeholder="Phone Number">
-      <input type="text" placeholder="Subject">
-      <textarea placeholder="Your Message" rows="5"></textarea>
+    <form id="contact-form">
+
+      <input type="text" name="name" placeholder="Full Name" required>
+
+      <input type="email" name="email" placeholder="Email" required>
+
+      <input type="tel" name="phone" placeholder="Phone Number">
+
+      <input type="text" name="title" placeholder="Subject">
+
+      <textarea name="message" placeholder="Your Message" rows="5"></textarea>
 
       <button type="submit">Send Message</button>
+
     </form>
   </section>
+
+  <!-- EMAILJS SCRIPT -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script>
+    emailjs.init("csAaLI7tosSag1kEp");
+
+    document.getElementById("contact-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      emailjs.sendForm(
+        "service_7mbxf62",
+        "template_55876qp",
+        this
+      ).then(() => {
+        alert("Message sent successfully!");
+        this.reset();
+      }, (error) => {
+        alert("Failed to send message");
+        console.log(error);
+      });
+
+    });
+  </script>
 
 </body>
 </html>
